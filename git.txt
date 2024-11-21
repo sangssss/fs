@@ -1,0 +1,20 @@
+﻿Branch
+cd path\to\your\folder
+git init
+echo "Initial file content" > file.txt
+git add file.txt
+git commit -m "Initial commit"
+git branch feature-branch
+git checkout feature-branch
+echo "Feature branch changes" > feature.txt
+git add feature.txt
+git commit -m "Add feature branch changes"
+git checkout main
+git branch feature-branch2
+git checkout feature-branch2
+echo "Feature branch 2 changes" > feature2.txt
+git add feature2.txt
+git commit -m "Add feature branch 2 changes"
+git checkout feature-branch
+git merge feature-branch2
+Insert- esc :wq

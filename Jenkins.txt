@@ -1,0 +1,52 @@
+﻿JENKINS:
+1.java  -version
+2.install java.exe in oracle,jenkins.war
+3.Cd .\Downloads\
+4.java -jar jenkins.war
+5.java -jar jenkins.war —enable-future-java
+(You will get username,pwd. Note pwd)
+6.localhost:8080
+7.admin,pwd
+8.dashboard->manage jenkins(click correct if any error)
+9.manage jenkins->tools->git->in cmd:where git(path)->paste in git.exe
+10.new item->create proj->freestyle->git pro->go to GitHub and create repo without readme 
+11.mkdir….->cd…->in vscode create java
+12)
+                class sample
+                {   
+                            public static void main(String []args)
+                            {
+                                        System.out.println("hello");
+                            }
+                };
+13)execute  all the commands  that we get in repo (add file .)#if   docent work add file in repo
+14)new item->dashboard->project name->freestyle—>git project->give repo url
+15)git—>username,pwd
+16)*/main—>build periodically—>* * * * *
+17)advanced->window back command->javac sample.java
+                                                                        java sample
+18)dashboard—>projname—>build—>click on changes—>console—>see changes
+19)
+        #for pipeline
+        pipeline {
+    agent any
+
+
+    stages {
+        stage("Checkout") {
+            steps {
+                git branch: "main", url:"https://github.com/Saisrithaja/esm.git"
+            }
+        }
+        stage("Compile") {
+            steps {
+                bat "javac sample.java"
+            }
+        }
+        stage("Run") {
+            steps {
+                bat "java sample"
+            }
+        }
+    }
+}
