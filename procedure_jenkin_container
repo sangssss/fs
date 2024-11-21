@@ -1,0 +1,27 @@
+GitHub floder ->create
+	app floder
+		app.py(flask)
+	dockerfile
+	Jenkins file
+	requirement.txt
+
+Docker login(create account)
+Go to account settings
+	personal access token
+		genetre ne token 
+			[password] 
+inside the Jenkins file -> conect -> echo"give the password from the token" after --> u {give the username of the docker (login)}
+change everywhere selcia ton-> username of the docker login
+
+
+same as for pipeline:
+go to dashboard
+then give git repository
+then svm
+give githubu link
+crendiatls 
+Jenkins filename
+save
+
+	
+	
